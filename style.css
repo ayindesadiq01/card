@@ -1,0 +1,327 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  height: 100vh;
+  font-weight: 500;
+}
+.container {
+  height: 100vh;
+}
+
+.bg-section {
+  background: url('./images/bg-main-mobile.png');
+  height: 40vh;
+}
+
+
+.card-image {
+  width: 70%;
+}
+
+input::placeholder {
+  color: hsl(270, 3%, 87%);
+  letter-spacing: 1px;
+}
+
+/* BACK CARD */
+.back-card-image {
+  position: relative;
+  left: 100px;
+  z-index: 0;
+}
+
+.back-card {
+  position: relative;
+  top: -205px;
+}
+
+.back-card-number {
+  position: relative;
+  bottom: 68px;
+  left: 30px;
+  z-index: 100;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+/* FRONT CARD */
+.front-card {
+  position: relative;
+  top: -270px;
+  left: 40px;
+}
+
+.front-card-image {
+  position: relative;
+  z-index: 1;
+}
+
+.front-card-number {
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+/* CARD DETAILS */
+.card-details {
+  position: absolute;
+  top: 90px;
+  left: 50px;
+  z-index: 50;
+  display: grid;
+  width: 65%;
+}
+
+.card-logo {
+  width: 25%;
+  margin-bottom: 2em;
+}
+
+.cardname-cvc {
+  margin-top: .5em;
+  font-size: .9rem;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.card-name {
+  letter-spacing: 1px;
+}
+
+/* INPUT FIELD */
+.card-input-section {
+  margin: -15em 1em 1em 1em;
+  z-index: 100;
+}
+
+form div {
+  margin-bottom: .8em;
+}
+
+label {
+  display: block;
+  margin-bottom: .2em;
+}
+
+input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: .5em;
+  border-radius: 5px;
+  border: 1.8px solid hsl(270, 3%, 87%);
+}
+
+/* EXPIRY DATE INFO */
+.exp-date-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expiry-date{
+  width: 45%;
+}
+
+.expiry-date-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expiry-date-input .exp-input {
+  width: 48%;
+}
+
+.expiry-date-input .exp-input input {
+  margin-right: 1em;
+}
+
+/* CVC INFO */
+.cvc-info {
+  width: 50%;
+}
+
+/* BUTTON */
+.btn {
+  width: 100%;
+  background: hsl(278, 68%, 11%);
+  border: 0;
+  border-radius: 7px;
+  padding: .9em;
+  color: white;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.error-message {
+  color: red;
+  font-size: .7rem;
+  font-weight: 400;
+  }
+
+/* CONFIMATION */
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 18em 1em 1em 1em;
+  position: absolute;
+  left: 30px;
+  top: 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.complete-icon {
+  margin-bottom: 1.5em;
+}
+
+.confirmation h1 {
+  font-weight: 400;
+}
+
+.confirmation p {
+  margin: 1.5em 0 2em 0;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 1024px) {
+.container {
+  display: flex;
+  max-width: 100%;
+}
+.bg-section {
+  background: url('./images/bg-main-desktop.png');
+  width: 35%;
+  height: 100vh;
+}
+
+.card {
+  top: 160px;
+  left: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.front-card, .back-card {
+  position: absolute;
+}
+
+.front-card {
+  top: 50px;
+  left: 80px;
+}
+
+.back-card {
+  top:240px;
+  left: 100px;
+}
+
+.card-logo {
+  width: 70px;
+}
+
+.front-card-image {
+  bottom: 0px;
+  left: 0px;
+  z-index: 1;
+  box-shadow: 0px 10px 15px solid grey;
+  position: relative;
+}
+
+.card-details {
+  top: 70px;
+  left: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardname-cvc {
+  padding-top: .5em;
+  width: 28%;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.back-card-image {
+  order: 2;
+  top: 0px;
+  left: 0px;
+}
+.back-card-number {
+  left: -85px;
+  top: -90px;
+}
+.front-card-number {
+  width: 28%;
+}
+
+.card-input-section {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  left: 40px;
+  z-index: 100;
+}
+.confirmation {
+  margin: 0 auto;
+  margin-top: 6em;
+  z-index: 100;
+  left: 60%;
+}
+}
+
+@media (min-width: 1440px) {
+.bg-section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30%;
+}
+
+.front-card,.back-card {
+  width: 40%;
+}
+
+.front-card {
+  top: 50px;
+  left: 130px;
+}
+
+.back-card {
+  top: 300px;
+  left: 200px;
+}
+
+.back-card-image, .front-card-image {
+  box-shadow: 10px 2px 30px rgba(0, 0, 0, .4);
+  background-color: none;
+}
+.card {
+  position: absolute;
+  display: block;
+  width: 60%;
+}
+
+.card-details{
+  top: 90px;
+  left: 150px;
+}
+}

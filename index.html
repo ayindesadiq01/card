@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container">
+  <section class="bg-section"></section>
+  <!-- <div class="card"> -->
+   <!--BACK CARD-->
+   <div class="back-card">
+    <img src="./images/bg-card-back.png" alt=" back card" class="back-card-image card-image">
+    <span class="back-card-number">000</span>
+   </div>
+
+   <!--FRONT CARD-->
+   <div class="front-card">
+    <img src="./images/bg-card-front.png" alt="front card" class="front-card-image card-image">
+    
+   </div>
+   <!--CARD DETAILS-->
+   <div class="card-details">
+    <img src="./images/card-logo.svg" alt="card logo" class="card-logo">
+    <span class="front-card-number">0000 0000 0000 0000</span>
+    <div class="cardname-cvc">
+     <span class="card-name">JANE APPLESEED</span>
+     <span class="cvc-number">
+      <span class="cvc-month">00</span>/<span class="cvc-year">00</span>
+     </span>
+    </div>
+   </div>
+  <!-- </div> -->
+
+  <!--INPUT DATA FIELD-->
+  <div class="card-input-section">
+   <form action="" name="card info input">
+    <div class="cardname">
+     <label for="cardholder name" class="cardHolderName">CARDHOLDER NAME</label>
+     <input type="text" class="cardname-input input input-nam" placeholder="e.g. Jane Appleseed" >
+     <p class="error-message name-error"></p>
+    </div>
+
+    <div class="cardnumber">
+     <label for="cardholder number" class="cardNumber">CARD NUMBER</label>
+     <input type="text" class="cardnumber-input input input-no" placeholder="e.g. 1234 5678 9123 0000">
+     <p class="error-message number-error"></p>
+    </div>
+
+    <!--EXPIRY DATE INFO-->
+    <div class="exp-date-info">
+     <!--EXPIRY DATE-->
+     <div class="expiry-date">
+      <label for="expiry date">EXP. DATE (MM/YY)</label>
+      <div class="expiry-date-input">
+       <div class="exp-input">
+        <!--INPUT FIELD FOR MONTH & YEAR-->
+        <input type="number" placeholder="MM" class="input input-mo input-month">
+        <p class="error-message mon-error"></p>
+       </div>
+       <div class="exp-input">
+        <input type="number" placeholder="YY" class="input input-year input-yr">
+        <p class="error-message yr-error"></p>
+       </div>
+      </div>
+     </div>
+
+     <!--CVC-->
+     <div class="cvc-info">
+      <label for="cvc">CVC</label>
+      <input type="number" placeholder="e.g. 123" class="input input-cv input-cvc">
+      <p class="error-message cvc-error"></p>
+     </div>
+    </div>
+
+    <!--BUTTON-->
+    <button type="submit" class="btn">Confirm</button>
+   </form>
+  </div>
+
+  <!--POP UP ADDED CARD DETAILS-->
+  <div class="confirmation hidden">
+   <div class="mark"><img src="./images/icon-complete.svg" alt="complete icon" class="complete-icon"></div>
+   <h1 class="thanks">THANK YOU!</h1>
+   <p class="added-card">We've added your card details</p>
+   <button type="submit" class="continue-btn btn">Continue</button>
+  </div>
+ </div>
+ <script src="script.js"></script>
+</body>
+</html>
